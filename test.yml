@@ -1,0 +1,13 @@
+name: adriano
+age: 31
+adresses:
+    -
+        street: 'baltazar alves'
+        number: 73
+        zipcode: 186384
+    -
+        street: 'luiz rocha miranda'
+        number: 522
+        zipocode: 04344-010
+longtext: |
+    "gahsghagshgahsg a s as a s adresses: asa s a sas asasasa sas a sasasas asa\n"
