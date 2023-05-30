@@ -7,7 +7,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Mudei nome
-          run: echho "Hello World"
+          run: echo "Hello World"
         - name: mutiline script
           run: |
              node -v
