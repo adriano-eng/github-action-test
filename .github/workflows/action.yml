@@ -1,6 +1,11 @@
 name: Action Flow
 #on: [push]
 on:
+   schedule:
+     #- cron: "minutes hours  day-of-month month day-of-week "
+     - cron: "0/5 * * * * "
+     - cron: "0/6 * * * * "
+
    push:
    pull_request:
      types:
