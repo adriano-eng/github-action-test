@@ -1,5 +1,12 @@
 name: Action Flow
-on: [push]
+#on: [push]
+on:
+   push:
+   pull_request:
+     types:
+       - "closed"
+       - "opened"
+       - "reopened"
 jobs:
   run-github-actions:
      runs-on: ubuntu-latest
