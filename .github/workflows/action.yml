@@ -1,6 +1,8 @@
 name: Action Flow
 #on: [push]
 on:
+   repository_dispatch:
+       types: ['build']
    schedule:
      #- cron: "minutes hours  day-of-month month day-of-week "
      - cron: "0/5 * * * * "
