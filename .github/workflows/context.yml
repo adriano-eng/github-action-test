@@ -1,12 +1,20 @@
 name: Context
 
-on: [push]
+on: [push, pull_request:]
 
 jobs:
     functions:
       runs-on: ubuntu-latest
+      if: github.event_name == 'pull_request'
       steps:
         - name: dump
+          run: |
+              echo ${{ contains( 'hello', 'll')}}
+              echo ${{ startsWith( 'hello', 'he')}}
+              echo ${{ endsWith( 'hello', 'lo')}}
+              echho ${{ format('Hello {0} {1} {2}', 'World', '!', '!')}}
+        - name: dump2
+          if: failure()
           run: |
               echo ${{ contains( 'hello', 'll')}}
               echo ${{ startsWith( 'hello', 'he')}}
